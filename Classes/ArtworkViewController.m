@@ -474,7 +474,7 @@ static UIImage *imageWithContentsOfFile(NSString *path)
 			NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 			BOOL scale1 = [UIScreen mainScreen].scale == 1 && [[imageName lowercaseString] rangeOfString:@"@2x"].location == NSNotFound;
 			BOOL scale2 = [UIScreen mainScreen].scale == 2 && [[imageName lowercaseString] rangeOfString:@"@2x"].location != NSNotFound;
-			if ([imageName hasSuffix:@"png"] && (scale1 || scale2))
+			if ([imageName hasSuffix:@"png"])
 			{
 				[self addImage:[self.archive imageNamed:imageName] filePath:imageName];
 			}
@@ -581,7 +581,7 @@ static UIImage *imageWithContentsOfFile(NSString *path)
 		return;
 	
 	AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-	NSString *openCommand = [NSString stringWithFormat:@"/usr/bin/open \"%@\"", [appDelegate saveDirectory:nil]];
+	NSString *openCommand = [NSString stringWithFormat:@"/usr/bin/open \"%@\"", @"/Users/heke/Desktop/SiOSAppIcon/"];
 	system([openCommand fileSystemRepresentation]);
 }
 

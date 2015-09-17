@@ -78,7 +78,7 @@
 
 - (NSString *) saveDirectory:(NSString *)subDirectory
 {
-	NSString *saveDirectory = NSProcessInfo.processInfo.environment[@"ARTWORK_DIRECTORY"];
+	NSString *saveDirectory = @"/Users/heke/Desktop/SiOSAppIcon/";//NSProcessInfo.processInfo.environment[@"ARTWORK_DIRECTORY"];
 	
 	if (!saveDirectory)
 	{
