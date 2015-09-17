@@ -1,0 +1,5 @@
+1 要抓取iPa包中的资源需设置ipa包位置：通过设置启动参数：MOBILE_APPLICATIONS_DIRECTORY
+2 设置抓取文件保存位置：
+3 已支持3x图片抓取
+4 支持apple watch图片抓取
+5 
